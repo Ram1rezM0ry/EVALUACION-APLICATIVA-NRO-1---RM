@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro Exitoso</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            color: #fff;
+        }
+        .success-container {
+            margin: 50px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            text-align: center;
+        }
+        .success-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-container">
+            <h1>¡Producto Registrado con Éxito!</h1>
+            <p><strong>Nombre:</strong> <span th:text="${productos.NombreProducto}"></span></p>
+            <p><strong>Fecha de Caducidad:</strong> <span th:text="${productos.FechaCaducidad}"></span></p>
+            <p><strong>Stock Mínimo:</strong> <span th:text="${productos.StockMinimo}"></span></p>
+            <p><strong>Stock Máximo:</strong> <span th:text="${productos.StockMaximo}"></span></p>
+            <p><strong>Precio Unitario:</strong> <span th:text="${productos.PrecioUnitario}"></span></p>
+            <p><strong>Categoría:</strong> <span th:text="${productos.Categoria}"></span></p>
+            <p><strong>Marca:</strong> <span th:text="${productos.Marca}"></span></p>
+        </div>
+    </div>
+</body>
+</html>
